@@ -11,6 +11,90 @@
 	height: 100vh;
 	width: 100%;
 }
+ 
+
+
+
+ 
+
+
+.container {
+  display: inline flex;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 5px;
+	left: 6px;
+	width: 5px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .front{
 	height: 545px;
@@ -37,6 +121,7 @@
 	margin-left: 16px;
 }
 
+
 .img2{
 	width: 30px;
 	height: 20px;
@@ -44,8 +129,9 @@
 	border-radius: 5px;
 	padding-top: 11px;
 	padding-bottom: 11px;
-	padding-right: 18px;
+	padding-right: 19px;
 	padding-left: 18px;
+	margin-bottom: 23px;
 }
 .img3{
 	width: 49px;
@@ -73,12 +159,12 @@
 	margin-left: 45px;
 	padding-top: 26px;
 	padding-bottom: 7px;
-	padding-left: 22px;
-	padding-right: 126px;
+	padding-left: 20px;
+	padding-right: 128px;
 	border: 1px solid #555;
 	border-radius: 5px;
 	font-size: 14px;
-	margin-top: 10px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 	outline: none !important;
 }
@@ -97,7 +183,7 @@
 	margin-left: 45px;
 	padding-top: 26px;
 	padding-bottom: 7px;
-	padding-left: 22px;
+	padding-left: 20px;
 	padding-right: 126px;
 	border: 1px solid #555;
 	border-radius: 5px;
@@ -106,13 +192,13 @@
 }
 
 .col-md-6 input{
-	width: 137px;
+	width: 133px;
 	padding-top: 26px;
 	padding-bottom: 7px;
 	font-size: 15px;
 	border-radius: 5px;
-    padding-left: 15.5px;
-    margin-left: 17px;
+    padding-left: 19px;
+    margin-left: 15.5px;
     border: 1px solid #555;
     outline: none !important;
 }
@@ -126,7 +212,7 @@
     font-size: 15px;
     color: #fff;
     padding-left: 110px;
-    padding-right: 110px;
+    padding-right: 109px;
     border-radius: 5px;
     border: none;
     margin-top: 20px;
@@ -135,14 +221,14 @@
 .label1{
 	position: absolute;
 	margin-left: 66px;
-	padding-top: 17px;
+	padding-top: 26px;
 	padding-bottom: 11px;
 	color: blue;
 	font-size: 13px;
 }
 .label2{
 	position: absolute;
-	margin-left: 67px;
+	margin-left: 66px;
 	padding-top: 6px;
 	padding-bottom: 8px;
 	color: blue;
@@ -150,7 +236,7 @@
 }
 .label3{
 	position: absolute;
-	margin-left: 33px;
+	margin-left: 37px;
 	padding-top: 6px;
 	padding-bottom: 7px;
 	color: blue;
